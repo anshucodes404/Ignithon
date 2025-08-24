@@ -1,5 +1,25 @@
 {
   "dependencies": {
-    "cors": "^2.8.5"
-  }
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "this is a backend for Ann Seva app",
+  "type": "module",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Ann",
+    "Seva",
+    "backend"
+  ],
+  "author": "Anshu, apurba, Ayushi, Rashika",
+  "license": "ISC"
 }
