@@ -70,19 +70,11 @@ const RaiseIssue = () => {
     urgency: "",
   })
 
-  const [selectedImages, setSelectedImages] = useState([])
   const [setCurrentLocation] = useState("")
 
   const handleInputChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
-
-  const handleImageUpload = (e) => {
-    if (e.target.files) {
-      setSelectedImages(Array.from(e.target.files))
-    }
-  }
-
   const getCurrentLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -284,20 +276,6 @@ const RaiseIssue = () => {
                 <div>
                   <Label htmlFor="images">Upload Images (Optional)</Label>
                   <div className="mt-2">
-                    <Input
-                      id="images"
-                      type="file"
-                      multiple
-                      accept="image/*"
-                      onChange={handleImageUpload}
-                      className="file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#d6efd9] file:text-[#195319] hover:file:bg-[#80af81]"
-                    />
-                    {selectedImages.length > 0 && (
-                      <div className="mt-2 flex items-center space-x-2">
-                        <Camera className="w-4 h-4 text-[#518d4f]" />
-                        <span className="text-sm text-[#518d4f]">{selectedImages.length} image(s) selected</span>
-                      </div>
-                    )}
                   </div>
                 </div>
 
